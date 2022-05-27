@@ -1,2 +1,5 @@
 __pycache__/
 pythonEnv/
+build/
+dist/
+main.spec

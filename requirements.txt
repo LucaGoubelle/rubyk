@@ -2,3 +2,4 @@ pytest
 pygame
 Pillow
 pyinstaller
+PyYAML

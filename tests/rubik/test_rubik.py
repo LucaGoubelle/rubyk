@@ -3,9 +3,11 @@ from unittest.mock import MagicMock, patch
 import sys
 from typing import List, Dict
 
-sys.path.append("../../../")
+sys.path.append("../../")
+
 import rubyk_lib
 from rubyk_lib import Rubik
+
 
 @patch("rubyk_lib.Sticker")
 @patch("rubyk_lib.Rubik")
@@ -38,7 +40,7 @@ def test_rubik_mock(MockRubik, MockSticker):
             assert MockSticker is rubyk_lib.Sticker
             assert MockSticker.called
 
-@patch("rubyk_lib.Rubik")
+@patch("rubyk_lib.rubik.Rubik")
 def test_rubik_mock_method(MockRubik):
     cube = Rubik(3)
     cube.to_dict = MagicMock()
@@ -143,7 +145,7 @@ def test_rubik_size_failed():
     with pytest.raises(ValueError):
         Rubik(0)
         Rubik(-1)
-        
+
 def test_rubik_size_type_failed():
     with pytest.raises(TypeError):
         Rubik("tyty")

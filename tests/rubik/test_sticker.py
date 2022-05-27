@@ -1,7 +1,8 @@
 import pytest
 import sys
 
-sys.path.append("../../../")
+sys.path.append("../../")
+
 from rubyk_lib import Sticker
 
 def test_sticker():

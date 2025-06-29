@@ -13,7 +13,6 @@ class STDMoves
         newRight = RH.genEmptyFace(size)
         newBack = RH.genEmptyFace(size)
 
-
         for i in 0..size-1 do
             newFront[0][i] = cube.right[0][i]
             newLeft[0][i] = cube.front[0][i]
@@ -44,6 +43,43 @@ class STDMoves
         return newCube
     end
 
+
+    def moveD(cube)
+        size = cube.down.size
+        cube.down = RH.rotate(cube.down)
+
+        newFront = RH.genEmptyFace(size)
+        newLeft = RH.genEmptyFace(size)
+        newRight = RH.genEmptyFace(size)
+        newBack = RH.genEmptyFace(size)
+
+        for i in 0..size-1 do
+            newFront[size-1][i] = cube.left[size-1][i]
+            newLeft[size-1][i] = cube.back[size-1][i]
+            newRight[size-1][i] = cube.front[size-1][i]
+            newBack[size-1][i] = cube.right[size-1][i]
+        end
+
+        cube.front = RH.transfert(cube.front, newFront)
+        cube.left = RH.transfert(cube.left, newLeft)
+        cube.right = RH.transfert(cube.right, newRight)
+        cube.back = RH.transfert(cube.back, newBack)
+
+        return cube
+    end
+
+    def moveDPrime(cube)
+        for i in 0..2 do
+            cube = moveD(cube)
+        end
+        return cube
+    end
+
+    def moveD2(cube)
+        newCube = moveD(cube)
+        newCube = moveD(newCube)
+        return newCube
+    end
 
     def moveR(cube)
         size = cube.up.size

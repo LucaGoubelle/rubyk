@@ -19,6 +19,13 @@ class Mover
         when "U2"
             cube = @stdMoves.moveU2(cube)
 
+        when "D"
+            cube = @stdMoves.moveD(cube)
+        when "D'"
+            cube = @stdMoves.moveDPrime(cube)
+        when "D2"
+            cube = @stdMoves.moveD2(cube)
+
         when "R"
             cube = @stdMoves.moveR(cube)
         when "R'"

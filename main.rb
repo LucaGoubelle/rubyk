@@ -5,21 +5,29 @@ mover = Mover.new()
 scrambler = CubeScrambler.new()
 printer = CubePrinter.new()
 
-cube = builder.build(3)
+sizeCube = 3
+cube = builder.build(sizeCube)
 
 while true
-    
+    # Printing the cube
     printer.print(cube)
 
+    # User Input
+    puts "\nENTER A MOVE OR CMD :"
     mv = gets.chomp
 
+    # Move Handle
     cube = mover.simpleMove(cube, mv)
 
+    # CMD Handle
     if mv == "scramble"
         cube = scrambler.scramble(cube)
+    elsif mv == "init"
+        cube = builder.build(sizeCube)
     elsif mv == "exit"
         break
     end
 
-    puts "-------------------------------------\n"
+    # IHM jump
+    puts "\n\n-------------------------------------\n\n"
 end

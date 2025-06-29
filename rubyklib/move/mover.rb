@@ -54,6 +54,20 @@ class Mover
         when "y2"
             cube = @axisMoves.moveY2(cube)
 
+        when "x"
+            cube = @axisMoves.moveX(cube)
+        when "x'"
+            cube = @axisMoves.moveXPrime(cube)
+        when "x2"
+            cube = @axisMoves.moveX2(cube)
+
+        when "z"
+            cube = @axisMoves.moveZ(cube)
+        when "z'"
+            cube = @axisMoves.moveZPrime(cube)
+        when "z2"
+            cube = @axisMoves.moveZ2(cube)
+
         else
             cube = cube
         end

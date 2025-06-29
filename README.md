@@ -14,5 +14,4 @@ ruby rubik's cube simulator in console
 ## axis of improvement
 
 * Change algorithms in Scrambler class
-* Add WMoves (layers)
 * Add rubik's cube solving system (comming soon)

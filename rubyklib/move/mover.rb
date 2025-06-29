@@ -1,12 +1,16 @@
 require "./rubyklib/move/std_moves.rb"
 require "./rubyklib/move/axis_moves.rb"
+require "./rubyklib/move/wmoves.rb"
 
 class Mover
     attr_reader :stdMoves
+    attr_reader :axisMoves
+    attr_reader :wmoves
 
     def initialize()
         @stdMoves = STDMoves.new()
         @axisMoves = AxisMoves.new()
+        @wmoves = WMoves.new()
     end
 
     def simpleMove(cube, move)
@@ -68,6 +72,41 @@ class Mover
         when "z2"
             cube = @axisMoves.moveZ2(cube)
 
+        when "Uw"
+            cube = @wmoves.moveUw(cube)
+        when "Uw'"
+            cube = @wmoves.moveUwPrime(cube)
+        when "Uw2"
+            cube = @wmoves.moveUw2(cube)
+
+        when "Dw"
+            cube = @wmoves.moveDw(cube)
+        when "Dw'"
+            cube = @wmoves.moveDwPrime(cube)
+        when "Dw2"
+            cube = @wmoves.moveDw2(cube)
+
+        when "Lw"
+            cube = @wmoves.moveLw(cube)
+        when "Lw'"
+            cube = @wmoves.moveLwPrime(cube)
+        when "Lw2"
+            cube = @wmoves.moveLw2(cube)
+
+        when "Rw"
+            cube = @wmoves.moveRw(cube)
+        when "Rw'"
+            cube = @wmoves.moveRwPrime(cube)
+        when "Rw2"
+            cube = @wmoves.moveRw2(cube)
+
+        when "Fw"
+            cube = @wmoves.moveFw(cube)
+        when "Fw'"
+            cube = @wmoves.moveFwPrime(cube)
+        when "Fw2"
+            cube = @wmoves.moveFw2(cube)
+
         else
             cube = cube
         end
@@ -87,5 +126,3 @@ class Mover
         end
     end
 end
-
-

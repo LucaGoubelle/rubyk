@@ -15,6 +15,8 @@ class CubePrinter
     end
     
     # print the cube in console
+    # @author: LucaGoubelle
+
     def print(cube)
         begin
             content = ""
@@ -39,8 +41,7 @@ class CubePrinter
     end
 
 
-    
-
+    # decomposed logic here
 
     private def printRowUpDown(row)
         content = ""

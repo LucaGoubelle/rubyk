@@ -3,7 +3,7 @@ class WGOProcessor
     attr_reader :data
 
     def initialize()
-        #todo: add cases to process
+        #todo: add cases to process (17 possibilities)
         @data = {}
     end
 

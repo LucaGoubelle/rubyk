@@ -1,7 +1,3 @@
-############################
-# Rubik's Cube data models #
-# @author: LucaGoubelle    #
-############################
 
 class Cube
     attr_accessor :back
@@ -10,6 +6,11 @@ class Cube
     attr_accessor :front
     attr_accessor :right
     attr_accessor :down
+
+    ############################
+    # Rubik's Cube data models #
+    # @author: LucaGoubelle    #
+    ############################
 
     def initialize(b,u,l,f,r,d)
         @back = b
@@ -20,6 +21,8 @@ class Cube
         @down = d
     end
 
+    # return an Hash of cube object
+    # @author: LucaGoubelle
     def toHash()
         result = {
             "back" => @back,
@@ -31,4 +34,5 @@ class Cube
         }
         return result
     end
+    
 end

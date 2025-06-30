@@ -13,6 +13,9 @@ class Mover
         @wmoves = WMoves.new()
     end
 
+    # Do one specific move on a passed cube object
+    # @author: LucaGoubelle
+
     def simpleMove(cube, move)
         case move
 
@@ -113,6 +116,8 @@ class Mover
         return cube
     end
 
+    # do multiple moves on a passed cube object
+    # @author: LucaGoubelle
 
     def multiMoves(cube, moves)
         begin

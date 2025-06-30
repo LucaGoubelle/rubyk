@@ -1,4 +1,7 @@
 
+# ANSI COLORS CODE for Console context
+# @author: LucaGoubelle
+
 class Colors
     RED = "\e[41m \e[0m"
     GREEN = "\e[42m \e[0m"

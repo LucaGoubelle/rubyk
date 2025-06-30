@@ -4,9 +4,6 @@ require "./solver3x3/handlers/white_corners_handler.rb"
 
 class Solver3x3
 
-    # solve a 3x3 with a mix of standard methods 
-    # and OLL / PLL from CFOP method
-    # @author: LucaGoubelle
     attr_reader :startHandler
     attr_reader :whiteCrossHandler
     attr_reader :whiteCornersHandler
@@ -16,6 +13,10 @@ class Solver3x3
         @whiteCrossHandler = WhiteCrossHandler.new()
         @whiteCornersHandler = WhiteCornersHandler.new()
     end
+
+    # solve a 3x3 with a mix of standard methods 
+    # and OLL / PLL from CFOP method
+    # @author: LucaGoubelle
 
     def solve(cube)
         cube = @startHandler.handle(cube)

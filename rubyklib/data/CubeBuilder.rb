@@ -6,6 +6,9 @@ class CubeBuilder
         return Array.new(size){Array.new(size,color)}
     end
 
+    # build an instance of full cube (complete)
+    # @author: LucaGoubelle
+
     def build(size)
         begin
             b = buildFace(size, "green")

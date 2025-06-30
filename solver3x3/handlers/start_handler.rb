@@ -13,6 +13,11 @@ class StartHandler
         @mover = Mover.new()
     end
 
+    # handle the starting part, which consist to 
+    # orient the cube in the good axis
+    # (yellow on top, white on bottom)
+    # @author: LucaGoubelle
+
     def handle(cube)
         centerUp = @scanner.scanCenter(cube, "up")
         centerFront = @scanner.scanCenter(cube, "front")

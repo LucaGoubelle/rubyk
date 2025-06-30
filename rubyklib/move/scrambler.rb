@@ -28,6 +28,9 @@ class CubeScrambler
 
     end
 
+    # scrambling the puzzle based on the size of it
+    # @author: LucaGoubelle
+
     def scramble(cube)
         size = cube.up.size
         case size

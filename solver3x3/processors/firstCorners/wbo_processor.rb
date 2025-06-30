@@ -3,7 +3,7 @@ class WBOProcessor
     attr_reader :data
 
     def initialize()
-        #todo: add cases to process
+        #todo: add cases to process (14 possibilities)
         @data = {}
     end
 

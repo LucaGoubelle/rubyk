@@ -30,6 +30,10 @@ class WhiteCornersHandler
         @wboProcessor =  WBOProcessor.new()
     end
 
+    # solve the first corners, 
+    # then to assembling the first face
+    # @author: LucaGoubelle
+
     def handle(cube)
         cube = handleWBRCorner(cube)
         cube = handleWGRCorner(cube)

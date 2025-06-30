@@ -28,6 +28,10 @@ class WhiteCrossHandler
         @woProcessor = WOProcessor.new()
     end
 
+    # solve the white cross on the cube
+    # (actually the first step in solving cube)
+    # @author: LucaGoubelle
+
     def handle(cube)
         cube = handleWBEdge(cube)
         cube = handleWREdge(cube)

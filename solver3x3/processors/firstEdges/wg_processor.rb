@@ -30,7 +30,6 @@ class WGProcessor
     
     def process(inputData)
         result = if @data.key?(inputData) then @data[inputData] else "???" end
-        puts result
         return result
     end
 end

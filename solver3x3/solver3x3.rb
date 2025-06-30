@@ -1,5 +1,6 @@
 require "./solver3x3/handlers/start_handler.rb"
 require "./solver3x3/handlers/white_cross_handler.rb"
+require "./solver3x3/handlers/white_corners_handler.rb"
 
 class Solver3x3
 
@@ -8,15 +9,18 @@ class Solver3x3
     # @author: LucaGoubelle
     attr_reader :startHandler
     attr_reader :whiteCrossHandler
+    attr_reader :whiteCornersHandler
 
     def initialize()
         @startHandler = StartHandler.new()
         @whiteCrossHandler = WhiteCrossHandler.new()
+        @whiteCornersHandler = WhiteCornersHandler.new()
     end
 
     def solve(cube)
         cube = @startHandler.handle(cube)
         cube = @whiteCrossHandler.handle(cube)
+        cube = @whiteCornersHandler.handle(cube)
         #todo: implement remaining code
         return cube
     end

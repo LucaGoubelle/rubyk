@@ -34,7 +34,7 @@ class Mover
             cube = @stdMoves.moveR(cube)
         when "R'"
             cube = @stdMoves.moveRPrime(cube)
-        when "R"
+        when "R2"
             cube = @stdMoves.moveR2(cube)
 
         when "L"

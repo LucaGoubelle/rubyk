@@ -12,6 +12,16 @@ class WGProcessor
             "up_back::white_green" => "y R2 y'",
             "up_back::green_white" => "y2 U Rw U' Rw' y2",
 
+            "front_left::white_green" => "D L D'",
+            "front_left::green_white" => "y' F2 L y",
+            "front_right::white_green" => "D' R' D",
+            "front_right::green_white" => "y F2 R' F2 y'",
+
+            "back_left::white_green" => "D L' D'",
+            "back_left::green_white" => "y' L y",
+            "back_right::white_green" => "D' R D",
+            "back_right::green_white" => "y R' y'",
+
             "down_left::white_green" => "L' D L D'",
             "down_left::green_white" => "y' F L y",
             "down_back::green_white" => "y2 F2 U Rw U' Rw' y2"
@@ -20,6 +30,7 @@ class WGProcessor
     
     def process(inputData)
         result = if @data.key?(inputData) then @data[inputData] else "???" end
+        puts result
         return result
     end
 end

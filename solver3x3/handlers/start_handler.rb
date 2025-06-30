@@ -19,6 +19,7 @@ class StartHandler
         data = centerUp +"_"+ centerFront
         if data == "yellow_blue"
             return cube # nothing to do
+        end
         return handleCenterOrient(cube, data)
     end
 

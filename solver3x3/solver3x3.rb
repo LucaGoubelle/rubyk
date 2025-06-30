@@ -2,6 +2,7 @@ require "./solver3x3/handlers/start_handler.rb"
 require "./solver3x3/handlers/white_cross_handler.rb"
 require "./solver3x3/handlers/white_corners_handler.rb"
 require "./solver3x3/handlers/second_layer_handler.rb"
+require "./solver3x3/handlers/yellow_cross_handler.rb"
 
 class Solver3x3
 
@@ -9,12 +10,14 @@ class Solver3x3
     attr_reader :whiteCrossHandler
     attr_reader :whiteCornersHandler
     attr_reader :secondLayerHandler
+    attr_reader :yellowCrossHandler
 
     def initialize()
         @startHandler = StartHandler.new()
         @whiteCrossHandler = WhiteCrossHandler.new()
         @whiteCornersHandler = WhiteCornersHandler.new()
         @secondLayerHandler = SecondLayerHandler.new()
+        @yellowCrossHandler = YellowCrossHandler.new()
     end
 
     # solve a 3x3 with a mix of standard methods 
@@ -26,6 +29,7 @@ class Solver3x3
         cube = @whiteCrossHandler.handle(cube)
         cube = @whiteCornersHandler.handle(cube)
         cube = @secondLayerHandler.handle(cube)
+        cube = @yellowCrossHandler.handle(cube)
         #todo: implement remaining code
         return cube
     end

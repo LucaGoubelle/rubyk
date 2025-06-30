@@ -1,6 +1,7 @@
 require "./rubyklib/all.rb"
 
 builder = CubeBuilder.new()
+dumper = CubeDumper.new()
 mover = Mover.new()
 scrambler = CubeScrambler.new()
 printer = CubePrinter.new()
@@ -24,6 +25,8 @@ while true
         cube = scrambler.scramble(cube)
     elsif mv == "init"
         cube = builder.build(sizeCube)
+    elsif mv == "dump"
+        puts dumper.dump(cube)
     elsif mv == "exit"
         break
     end

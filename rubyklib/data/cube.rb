@@ -19,4 +19,16 @@ class Cube
         @right = r
         @down = d
     end
+
+    def toHash()
+        result = {
+            "back" => @back,
+            "up" => @up,
+            "front" => @front,
+            "left" => @left,
+            "right" => @right,
+            "down" => @down
+        }
+        return result
+    end
 end

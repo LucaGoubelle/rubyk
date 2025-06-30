@@ -1,0 +1,24 @@
+require "./solver3x3/handlers/start_handler.rb"
+require "./solver3x3/handlers/white_cross_handler.rb"
+
+class Solver3x3
+
+    # solve a 3x3 with a mix of standard methods 
+    # and OLL / PLL from CFOP method
+    # @author: LucaGoubelle
+    attr_reader :startHandler
+    attr_reader :whiteCrossHandler
+
+    def initialize()
+        @startHandler = StartHandler.new()
+        @whiteCrossHandler = WhiteCrossHandler.new()
+    end
+
+    def solve(cube)
+        cube = @startHandler.handle(cube)
+        cube = @whiteCrossHandler.handle(cube)
+        #todo: implement remaining code
+        return cube
+    end
+
+end

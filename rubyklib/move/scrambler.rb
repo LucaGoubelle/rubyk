@@ -29,20 +29,41 @@ class CubeScrambler
     end
 
     def scramble(cube)
+        size = cube.up.size
+        case size
+        when 2
+            cube = scrambleSimpleCube(cube)
+        when 3
+            cube = scrambleSimpleCube(cube)
+        when 4
+            cube = scrambleBigCubes(cube)
+        when 5
+            cube = scrambleBigCubes(cube)
+        when 6
+            cube = scrambleHugeCubes(cube)
+        when 7
+            cube = scrambleHugeCubes(cube)
+        else
+            cube = scrambleSimpleCube(cube)
+        end
+        return cube
+    end    
+
+    private def scrambleSimpleCube(cube)
         rd = rand(@scrambles.size)
         scrb = @scrambles[rd]
         cube = @mover.multiMoves(cube, scrb)
         return cube
     end
 
-    def scrambleBigCubes(cube)
+    private def scrambleBigCubes(cube)
         rd = rand(@bigScrambles.size)
         scrb = @bigScrambles[rd]
         cube = @mover.multiMoves(cube, scrb)
         return cube
     end
 
-    def scrambleHugeCubes(cube)
+    private def scrambleHugeCubes(cube)
         scrb = @hugeScrambles
         cube = @mover.multiMoves(cube, scrb)
         return cube

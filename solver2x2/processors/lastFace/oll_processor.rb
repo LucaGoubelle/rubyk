@@ -13,10 +13,23 @@ class OLLProcessor
 
             # sunes cases
             "10_0001_0100_01_" => CubeAlgorithms::SUNE_ORIENT,
+            "10_0001_1010_00_" => "U "+CubeAlgorithms::SUNE_ORIENT,
+            "00_0101_1000_01_" => "U' "+CubeAlgorithms::SUNE_ORIENT,
+            "10_0010_1000_01_" => "U2 "+CubeAlgorithms::SUNE_ORIENT,
 
             # U cases
             "00_1010_1010_00_" => "F R U R' U' F'",
             "00_0110_0000_11_" => "U F R U R' U' F'",
+
+            # T cases
+            "10_0010_0010_10_" => "R U R' U' R' F R F'",
+            "00_0110_1001_00_" => "U R U R' U' R' F R F'",
+
+            # L cases
+            "00_0101_0010_10_" => "F R' F' R U R U' R'",
+            "01_0100_1010_00_" => "U2 F R' F' R U R U' R'",
+            "10_0010_0101_00_" => "U F R' F' R U R U' R'",
+            "00_1010_0100_01_" => "U' F R' F' R U R U' R'",
 
             # Pi cases
             "01_1000_1000_01_" => CubeAlgorithms::PI_ORIENT,

@@ -25,6 +25,7 @@ class LastFaceHandler
     def handle(cube)
         cube = handleOLL(cube)
         cube = handlePLL(cube)
+        cube = handleAUF(cube)
         return cube
     end
 
@@ -39,6 +40,17 @@ class LastFaceHandler
         pllConfig = @pllScanner.scanPLL(cube)
         sequence = @pllProcessor.process(pllConfig)
         cube = @mover.multiMoves(cube, sequence)
+        return cube
+    end
+
+    private def handleAUF(cube)
+        color = cube.front[0][0]
+        hmap = {
+            "orange" => "U",
+            "red" => "U'",
+            "green" => "U2"
+        }
+        cube = if hmap.key?(color) then @mover.multiMoves(cube, hmap[color]) else cube end
         return cube
     end
 

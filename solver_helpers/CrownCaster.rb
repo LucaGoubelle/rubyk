@@ -9,6 +9,7 @@ class CrownCaster
             for elem in row do
                 result += if elem == "yellow" then "1" else "0" end
             end
+            result += "_"
         end
         return result
     end

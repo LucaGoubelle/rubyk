@@ -44,7 +44,7 @@ class CrownScanner
         for i in 0..last do
             row = row.push(cube.up[index][i])
         end
-        row = row.push(cube.right[0][index])
+        row = row.push(cube.right[0][last-index])
         return row
     end
 

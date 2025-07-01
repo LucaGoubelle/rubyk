@@ -7,7 +7,9 @@ class PLLScanner
             "blue" => "B",
             "red" => "R",
             "orange" => "O",
-            "green" => "G"
+            "green" => "G",
+            "white" => "W",
+            "yellow" => "Y"
         }
     end
 

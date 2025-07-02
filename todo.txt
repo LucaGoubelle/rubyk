@@ -1,2 +1,3 @@
+v - implement solver2x2 (tests is welcome)
+
 - implement solver3x3
-- implement solver2x2

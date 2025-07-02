@@ -32,8 +32,8 @@ are:
 ## some other features
 
 * helpers for solver implementations
+* 2x2 Solver (experimental)
 
 ## axis of improvement
 
-* Change algorithms in Scrambler class
-* Add rubik's cube solving system (comming soon)
+* Add rubik's cube solving system for 3x3 (in progress, comming soon)

@@ -20,10 +20,14 @@ class OLLProcessor
             # U cases
             "00_1010_1010_00_" => "F R U R' U' F'",
             "00_0110_0000_11_" => "U F R U R' U' F'",
+            "11_0000_0110_00_" => "U' F R U R' U' F'",
+            "00_0101_0101_00_" => "U2 F R U R' U' F'",
 
             # T cases
             "10_0010_0010_10_" => "R U R' U' R' F R F'",
             "00_0110_1001_00_" => "U R U R' U' R' F R F'",
+            "00_1001_0110_00_" => "U' R U R' U' R' F R F'",
+            "01_0100_0100_01_" => "U2 R U R' U' R' F R F'",
 
             # L cases
             "00_0101_0010_10_" => "F R' F' R U R U' R'",
@@ -41,7 +45,6 @@ class OLLProcessor
     
     def process(inputData)
         result = if @data.key?(inputData) then @data[inputData] else "???" end
-        puts inputData
         return result
     end
 

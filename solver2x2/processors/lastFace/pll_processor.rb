@@ -21,7 +21,6 @@ class PLLProcessor
     
     def process(inputData)
         result = if @data.key?(inputData) then @data[inputData] else "???" end
-        puts inputData
         return result
     end
 

@@ -19,14 +19,14 @@ class PLLHandler
         return cube
     end
 
-    private handlePLL(cube)
+    private def handlePLL(cube)
         pllConfig = @scanner.scanPLL(cube)
         sequence = @pllProcessor.process(pllConfig)
         cube = @mover.multiMoves(cube, sequence)
         return cube
     end
 
-    private handleAUF(cube)
+    private def handleAUF(cube)
         color = cube.front[0][0]
         hmap = {
             "red" => "U'",

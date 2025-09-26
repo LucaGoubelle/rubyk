@@ -1,0 +1,26 @@
+{
+    "back":[
+        ["green", "green"],
+        ["green", "green"]
+    ],
+    "up":[
+        ["yellow", "yellow"],
+        ["yellow", "yellow"]
+    ],
+    "front":[
+        ["blue", "blue"],
+        ["blue", "blue"]
+    ],
+    "left":[
+        ["orange", "orange"],
+        ["orange", "orange"]
+    ],
+    "right":[
+        ["red", "red"],
+        ["red", "red"]
+    ],
+    "down":[
+        ["white", "white"],
+        ["white", "white"]
+    ]
+}

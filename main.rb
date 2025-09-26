@@ -1,12 +1,14 @@
 require "./rubyklib/all.rb"
 
 builder = CubeBuilder.new()
+loader = CubeLoader.new()
 dumper = CubeDumper.new()
 mover = Mover.new()
 scrambler = CubeScrambler.new()
 printer = CubePrinter.new()
 
 sizeCube = 3
+datafile = "res/rubiks_3.json"
 cube = builder.build(sizeCube)
 
 while true
@@ -23,6 +25,8 @@ while true
     # CMD Handle
     if mv == "scramble"
         cube = scrambler.scramble(cube)
+    elsif mv == "load"
+        cube = loader.load(datafile)
     elsif mv == "init"
         cube = builder.build(sizeCube)
     elsif mv == "dump"

@@ -2,6 +2,7 @@ require "./rubyklib/all.rb"
 
 builder = CubeBuilder.new()
 loader = CubeLoader.new()
+saver = CubeSaver.new()
 dumper = CubeDumper.new()
 mover = Mover.new()
 scrambler = CubeScrambler.new()
@@ -27,6 +28,8 @@ while true
         cube = scrambler.scramble(cube)
     elsif mv == "load"
         cube = loader.load(datafile)
+    elsif mv == "save"
+        saver.save(datafile, cube)
     elsif mv == "init"
         cube = builder.build(sizeCube)
     elsif mv == "dump"

@@ -6,7 +6,7 @@ class CubeSaver
     # @author: LucaGoubelle
     def save(filepath, cube)
         h = cube.toHash()
-        raw = JSON.generate(h)
+        raw = JSON.pretty_generate(h)
         File.write(filepath, raw)
     end
     

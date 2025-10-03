@@ -1,12 +1,9 @@
+require "./mynxlib/move/utils/MinxRotateUtils.rb"
 
-class KilominxRotateUtils
+class KilominxRotateUtils < MinxRotateUtils
 
     def self.genEmptyFace()
         return Array.new(5, "")
-    end
-
-    def self.copyFace(face)
-        return Marshal.load(Marshal.dump(face))
     end
 
     def self.rotate(face)

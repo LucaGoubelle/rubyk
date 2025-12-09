@@ -1,5 +1,5 @@
 require "./solver_helpers/CrownScanner.rb"
-require "./solver_helpers/CrownCaster.rb"
+require "./solver_helpers/casters/CrownCaster.rb"
 
 
 class OLLScanner

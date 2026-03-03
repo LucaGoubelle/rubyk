@@ -1,14 +1,13 @@
-require "./rubyklib/move/mover.rb"
 require "./solver_helpers/advanced/PLLScanner.rb"
+require "./solvers/solver3x3/handlers/handler.rb"
 require "./solvers/solver3x3/processors/lastFace/pll_processor.rb"
 
-class PLLHandler
-    attr_reader :mover
+class PLLHandler < Handler
     attr_reader :scanner
     attr_reader :pllProcessor
 
     def initialize()
-        @mover = Mover.new()
+        super()
         @scanner = PLLScanner.new()
         @pllProcessor = PLLProcessor.new()
     end

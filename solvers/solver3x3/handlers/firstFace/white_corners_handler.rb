@@ -1,18 +1,17 @@
-require "./rubyklib/move/mover.rb"
 require "./solver_helpers/seekers/Corner3Seeker.rb"
 
+require "./solvers/solver3x3/handlers/handler.rb"
 require "./solvers/solver3x3/processors/firstCorners/wbr_processor.rb"
 require "./solvers/solver3x3/processors/firstCorners/wgr_processor.rb"
 require "./solvers/solver3x3/processors/firstCorners/wgo_processor.rb"
 require "./solvers/solver3x3/processors/firstCorners/wbo_processor.rb"
 
-class WhiteCornersHandler
+class WhiteCornersHandler < Handler
 
     # White corners Handler
     # handle corners of first face (bottom)
     # @author: LucaGoubelle
 
-    attr_reader :mover
     attr_reader :seeker
 
     attr_reader :wbrProcessor
@@ -21,7 +20,7 @@ class WhiteCornersHandler
     attr_reader :wboProcessor
 
     def initialize()
-        @mover = Mover.new()
+        super()
         @seeker = Corner3Seeker.new()
         # processors
         @wbrProcessor = WBRProcessor.new()

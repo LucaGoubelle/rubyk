@@ -1,10 +1,9 @@
-require "./rubyklib/move/mover.rb"
+require "./solvers/solver3x3/handlers/handler.rb"
 
-class YellowCrossHandler
-    attr_reader :mover
+class YellowCrossHandler < Handler
     
     def initialize()
-        @mover = Mover.new()
+        super()
     end
 
     # make a yellow cross on top face
@@ -16,8 +15,6 @@ class YellowCrossHandler
         cube = correct(cube)
         return cube
     end
-
-
 
     private def create(cube)
         config = ""

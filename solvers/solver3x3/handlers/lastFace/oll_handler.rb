@@ -1,14 +1,13 @@
-require "./rubyklib/move/mover.rb"
 require "./solver_helpers/advanced/OLLScanner.rb"
+require "./solvers/solver3x3/handlers/handler.rb"
 require "./solvers/solver3x3/processors/lastFace/oll_processor.rb"
 
-class OLLHandler
-    attr_reader :mover
+class OLLHandler < Handler
     attr_reader :scanner
     attr_reader :ollProcessor
 
     def initialize()
-        @mover = Mover.new()
+        super()
         @scanner = OLLScanner.new()
         @ollProcessor = OLLProcessor.new()
     end

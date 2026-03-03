@@ -1,16 +1,15 @@
 require "./solvers/solver3x3/processors/center_processor.rb"
+require "./solvers/solver3x3/handlers/handler.rb"
 require "./solver_helpers/scanners/Cube3x3Scanner.rb"
-require "./rubyklib/move/mover.rb"
 
-class StartHandler
+class StartHandler < Handler
     attr_reader :processor
     attr_reader :scanner
-    attr_reader :mover
 
     def initialize()
+        super()
         @processor = CenterProcessor.new()
         @scanner = Cube3x3Scanner.new()
-        @mover = Mover.new()
     end
 
     # handle the starting part, which consist to 

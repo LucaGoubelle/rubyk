@@ -1,15 +1,14 @@
-require "./rubyklib/move/mover.rb"
 
 require "./solver_helpers/seekers/Edge3Seeker.rb"
 
+require "./solvers/solver3x3/handlers/handler.rb"
 require "./solvers/solver3x3/processors/firstEdges/wb_processor.rb"
 require "./solvers/solver3x3/processors/firstEdges/wr_processor.rb"
 require "./solvers/solver3x3/processors/firstEdges/wg_processor.rb"
 require "./solvers/solver3x3/processors/firstEdges/wo_processor.rb"
 
 
-class WhiteCrossHandler
-    attr_reader :mover
+class WhiteCrossHandler < Handler
     attr_reader :seeker
     # processors
     attr_reader :wbProcessor
@@ -19,7 +18,7 @@ class WhiteCrossHandler
 
 
     def initialize()
-        @mover = Mover.new()
+        super()
         @seeker = Edge3Seeker.new()
         # processors
         @wbProcessor = WBProcessor.new()

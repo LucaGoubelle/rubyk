@@ -1,7 +1,6 @@
+require "./solvers/solver2x2/processors/processor.rb"
 
-
-class WBRProcessor
-    attr_reader :data
+class WBRProcessor < Processor
 
     def initialize()
         @data = {
@@ -37,11 +36,6 @@ class WBRProcessor
             "down_front_right::red_white_blue" => "R' D'",
             "down_front_right::blue_red_white" => "F D"
         }
-    end
-
-    def process(inputData)
-        result = if @data.key?(inputData) then @data[inputData] else "???" end
-        return result
     end
 
 end

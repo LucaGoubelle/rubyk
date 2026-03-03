@@ -1,7 +1,7 @@
 require "./solver_helpers/CubeAlgorithms.rb"
+require "./solvers/solver2x2/processors/processor.rb"
 
-class WGRProcessor
-    attr_reader :data
+class WGRProcessor < Processor
 
     def initialize()
         @data = {
@@ -33,11 +33,6 @@ class WGRProcessor
             "down_back_right::green_red_white" => "R' U' R U R' U' R"
 
         }
-    end
-
-    def process(inputData)
-        result = if @data.key?(inputData) then @data[inputData] else "???" end
-        return result
     end
 
 end

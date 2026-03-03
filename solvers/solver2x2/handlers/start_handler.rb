@@ -1,14 +1,13 @@
-require "./rubyklib/move/mover.rb"
 require "./solver_helpers/seekers/Corner2Seeker.rb"
 require "./solvers/solver2x2/processors/firstCorners/wbr_processor.rb"
+require "./solvers/solver2x2/handlers/handler.rb"
 
-class StartHandler
-    attr_reader :mover
+class StartHandler < Handler
     attr_reader :seeker
     attr_reader :wbrProcessor
 
     def initialize()
-        @mover = Mover.new()
+        super()
         @seeker = Corner2Seeker.new()
         @wbrProcessor = WBRProcessor.new()
     end

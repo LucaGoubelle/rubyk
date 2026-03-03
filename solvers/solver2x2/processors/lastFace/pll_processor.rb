@@ -1,7 +1,7 @@
 require "./solver_helpers/CubeAlgorithms.rb"
+require "./solvers/solver2x2/processors/processor.rb"
 
-class PLLProcessor
-    attr_reader :data
+class PLLProcessor < Processor
 
     def initialize()
         @data = {
@@ -17,11 +17,6 @@ class PLLProcessor
             "GB_RO_BG_OR" => CubeAlgorithms::Y_PERM,
             "RO_BG_OR_GB" => CubeAlgorithms::Y_PERM
         }
-    end
-    
-    def process(inputData)
-        result = if @data.key?(inputData) then @data[inputData] else "???" end
-        return result
     end
 
 end

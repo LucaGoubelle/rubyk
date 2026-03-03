@@ -1,7 +1,7 @@
 require "./solver_helpers/CubeAlgorithms.rb"
+require "./solvers/solver2x2/processors/processor.rb"
 
-class WBOProcessor
-    attr_reader :data
+class WBOProcessor < Processor
 
     def initialize()
         @data = {
@@ -24,11 +24,6 @@ class WBOProcessor
             "down_front_left::orange_white_blue" => "L' U L U' L' U L",
             "down_front_left::blue_orange_white" => "L' U' L U L' U' L"
         }
-    end
-
-    def process(inputData)
-        result = if @data.key?(inputData) then @data[inputData] else "???" end
-        return result
     end
 
 end

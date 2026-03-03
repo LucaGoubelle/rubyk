@@ -1,7 +1,7 @@
 require "./solver_helpers/CubeAlgorithms.rb"
+require "./solvers/solver2x2/processors/processor.rb"
 
-class OLLProcessor
-    attr_reader :data
+class OLLProcessor < Processor
 
     def initialize()
         @data = {
@@ -41,11 +41,6 @@ class OLLProcessor
             "10_0001_0001_10_" => "U2 "+CubeAlgorithms::PI_ORIENT,
             "11_0000_1001_00_" => "U' "+CubeAlgorithms::PI_ORIENT
         }
-    end
-    
-    def process(inputData)
-        result = if @data.key?(inputData) then @data[inputData] else "???" end
-        return result
     end
 
 end

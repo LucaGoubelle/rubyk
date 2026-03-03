@@ -1,13 +1,12 @@
-require "./rubyklib/move/mover.rb"
 require "./solver_helpers/seekers/Corner2Seeker.rb"
 
 require "./solvers/solver2x2/processors/firstCorners/wgr_processor.rb"
 require "./solvers/solver2x2/processors/firstCorners/wgo_processor.rb"
 require "./solvers/solver2x2/processors/firstCorners/wbo_processor.rb"
+require "./solvers/solver2x2/handlers/handler.rb"
 
 
-class FirstFaceHandler
-    attr_reader :mover
+class FirstFaceHandler < Handler
     attr_reader :seeker
     # processors
     attr_reader :wgrProcessor
@@ -15,7 +14,7 @@ class FirstFaceHandler
     attr_reader :wboProcessor
 
     def initialize()
-        @mover = Mover.new()
+        super()
         @seeker = Corner2Seeker.new()
         # processors
         @wgrProcessor = WGRProcessor.new()

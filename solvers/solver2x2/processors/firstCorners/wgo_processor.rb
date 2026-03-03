@@ -1,6 +1,6 @@
+require "./solvers/solver2x2/processors/processor.rb"
 
-class WGOProcessor
-    attr_reader :data
+class WGOProcessor < Processor
 
     def initialize()
         @data = {
@@ -27,11 +27,6 @@ class WGOProcessor
             "down_back_left::orange_white_green" => "L U' L2",
             "down_back_left::green_orange_white" => "L2 U L'"
         }
-    end
-
-    def process(inputData)
-        result = if @data.key?(inputData) then @data[inputData] else "???" end
-        return result
     end
 
 end

@@ -1,15 +1,10 @@
+require "./solvers/solver3x3/processors/processor.rb"
 
-class WGOProcessor
-    attr_reader :data
+class WGOProcessor < Processor
 
     def initialize()
         #todo: add cases to process (17 possibilities)
-        @data = {}
-    end
-
-    def process(inputData)
-        result = if @data.key?(inputData) then @data[inputData] else "???" end
-        return result
+        super()
     end
 
 end

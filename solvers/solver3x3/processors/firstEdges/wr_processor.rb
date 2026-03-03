@@ -1,5 +1,6 @@
+require "./solvers/solver3x3/processors/processor.rb"
 
-class WRProcessor
+class WRProcessor < Processor
     
     def initialize()
         @data = {
@@ -19,9 +20,5 @@ class WRProcessor
             "down_right::red_white" => "y F2 U Rw U' Rw' y'"
         }
     end
-    
-    def process(inputData)
-        result = if @data.key?(inputData) then @data[inputData] else "???" end
-        return result
-    end
+
 end

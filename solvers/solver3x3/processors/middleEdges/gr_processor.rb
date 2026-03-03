@@ -1,11 +1,9 @@
+require "./solvers/solver3x3/processors/processor.rb"
 
-class GRProcessor
+class GRProcessor < Processor
     
     def initialize()
-        @data = {}
+        super()
     end
-    
-    def process(inpuData)
-        result = if @data.key?(inpuData) then @data[inpuData] else "???" end
-    end
+
 end

@@ -1,13 +1,9 @@
+require "./solvers/solver3x3/processors/processor.rb"
 
-class PLLProcessor
-    attr_reader :data
+class PLLProcessor < Processor
 
     def initialize()
-        @data = {}
+        super()
     end
 
-    def process(inputData)
-        result = if @data.key?(inputData) then @data[inputData] else "???" end
-        return result
-    end
 end

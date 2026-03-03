@@ -1,6 +1,6 @@
 require "./rubyklib/move/mover.rb"
 require "./solver_helpers/advanced/PLLScanner.rb"
-require "./solver3x3/processors/lastFace/pll_processor.rb"
+require "./solvers/solver3x3/processors/lastFace/pll_processor.rb"
 
 class PLLHandler
     attr_reader :mover

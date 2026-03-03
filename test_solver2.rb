@@ -1,5 +1,5 @@
 require "./rubyklib/all.rb"
-require "./solver2x2/solver2x2.rb"
+require "./solvers/solver2x2/solver2x2.rb"
 
 builder = CubeBuilder.new()
 scrambler = CubeScrambler.new()

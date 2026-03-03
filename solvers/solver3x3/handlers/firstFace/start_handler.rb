@@ -1,4 +1,4 @@
-require "./solver3x3/processors/center_processor.rb"
+require "./solvers/solver3x3/processors/center_processor.rb"
 require "./solver_helpers/scanners/Cube3x3Scanner.rb"
 require "./rubyklib/move/mover.rb"
 

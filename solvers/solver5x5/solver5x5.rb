@@ -1,4 +1,4 @@
-require "./solver5x5/handlers/center/whiteCenterHandler.rb"
+require "./solvers/solver5x5/handlers/center/whiteCenterHandler.rb"
 
 class Solver5x5 
     attr_reader :whiteCenterHandler 

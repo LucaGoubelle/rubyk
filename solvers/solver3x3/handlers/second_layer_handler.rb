@@ -1,10 +1,10 @@
 require "./rubyklib/move/mover.rb"
 require "./solver_helpers/seekers/Edge3Seeker.rb"
 
-require "./solver3x3/processors/middleEdges/br_processor.rb"
-require "./solver3x3/processors/middleEdges/gr_processor.rb"
-require "./solver3x3/processors/middleEdges/go_processor.rb"
-require "./solver3x3/processors/middleEdges/bo_processor.rb"
+require "./solvers/solver3x3/processors/middleEdges/br_processor.rb"
+require "./solvers/solver3x3/processors/middleEdges/gr_processor.rb"
+require "./solvers/solver3x3/processors/middleEdges/go_processor.rb"
+require "./solvers/solver3x3/processors/middleEdges/bo_processor.rb"
 
 class SecondLayerHandler
     attr_reader :mover

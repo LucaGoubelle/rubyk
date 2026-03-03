@@ -1,6 +1,6 @@
-require "./solver2x2/handlers/start_handler.rb"
-require "./solver2x2/handlers/first_face_handler.rb"
-require "./solver2x2/handlers/last_face_handler.rb"
+require "./solvers/solver2x2/handlers/start_handler.rb"
+require "./solvers/solver2x2/handlers/first_face_handler.rb"
+require "./solvers/solver2x2/handlers/last_face_handler.rb"
 
 class Solver2x2
     attr_reader :startHandler

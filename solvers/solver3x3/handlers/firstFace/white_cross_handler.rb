@@ -2,10 +2,10 @@ require "./rubyklib/move/mover.rb"
 
 require "./solver_helpers/seekers/Edge3Seeker.rb"
 
-require "./solver3x3/processors/firstEdges/wb_processor.rb"
-require "./solver3x3/processors/firstEdges/wr_processor.rb"
-require "./solver3x3/processors/firstEdges/wg_processor.rb"
-require "./solver3x3/processors/firstEdges/wo_processor.rb"
+require "./solvers/solver3x3/processors/firstEdges/wb_processor.rb"
+require "./solvers/solver3x3/processors/firstEdges/wr_processor.rb"
+require "./solvers/solver3x3/processors/firstEdges/wg_processor.rb"
+require "./solvers/solver3x3/processors/firstEdges/wo_processor.rb"
 
 
 class WhiteCrossHandler

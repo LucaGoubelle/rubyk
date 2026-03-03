@@ -1,10 +1,10 @@
 require "./rubyklib/move/mover.rb"
 require "./solver_helpers/seekers/Corner3Seeker.rb"
 
-require "./solver3x3/processors/firstCorners/wbr_processor.rb"
-require "./solver3x3/processors/firstCorners/wgr_processor.rb"
-require "./solver3x3/processors/firstCorners/wgo_processor.rb"
-require "./solver3x3/processors/firstCorners/wbo_processor.rb"
+require "./solvers/solver3x3/processors/firstCorners/wbr_processor.rb"
+require "./solvers/solver3x3/processors/firstCorners/wgr_processor.rb"
+require "./solvers/solver3x3/processors/firstCorners/wgo_processor.rb"
+require "./solvers/solver3x3/processors/firstCorners/wbo_processor.rb"
 
 class WhiteCornersHandler
 

@@ -1,6 +1,6 @@
 require "./rubyklib/move/mover.rb"
 require "./solver_helpers/seekers/Corner2Seeker.rb"
-require "./solver2x2/processors/firstCorners/wbr_processor.rb"
+require "./solvers/solver2x2/processors/firstCorners/wbr_processor.rb"
 
 class StartHandler
     attr_reader :mover

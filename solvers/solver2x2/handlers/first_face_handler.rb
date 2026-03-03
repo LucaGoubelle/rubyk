@@ -1,9 +1,9 @@
 require "./rubyklib/move/mover.rb"
 require "./solver_helpers/seekers/Corner2Seeker.rb"
 
-require "./solver2x2/processors/firstCorners/wgr_processor.rb"
-require "./solver2x2/processors/firstCorners/wgo_processor.rb"
-require "./solver2x2/processors/firstCorners/wbo_processor.rb"
+require "./solvers/solver2x2/processors/firstCorners/wgr_processor.rb"
+require "./solvers/solver2x2/processors/firstCorners/wgo_processor.rb"
+require "./solvers/solver2x2/processors/firstCorners/wbo_processor.rb"
 
 
 class FirstFaceHandler

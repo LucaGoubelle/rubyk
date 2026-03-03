@@ -1,6 +1,6 @@
 require "./rubyklib/move/mover.rb"
 require "./solver_helpers/advanced/OLLScanner.rb"
-require "./solver3x3/processors/lastFace/oll_processor.rb"
+require "./solvers/solver3x3/processors/lastFace/oll_processor.rb"
 
 class OLLHandler
     attr_reader :mover

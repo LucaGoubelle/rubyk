@@ -2,8 +2,8 @@ require "./rubyklib/move/mover.rb"
 require "./solver_helpers/advanced/OLLScanner.rb"
 require "./solver_helpers/advanced/PLLScanner.rb"
 
-require "./solver2x2/processors/lastFace/oll_processor.rb"
-require "./solver2x2/processors/lastFace/pll_processor.rb"
+require "./solvers/solver2x2/processors/lastFace/oll_processor.rb"
+require "./solvers/solver2x2/processors/lastFace/pll_processor.rb"
 
 class LastFaceHandler
     attr_reader :mover
